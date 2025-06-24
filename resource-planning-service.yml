@@ -6,10 +6,7 @@ spring:
     url: r2dbc:postgresql://db.${SUPABASE_PROJECT_REF_IMPORTED}.supabase.co:5432/postgres
     username: postgres
     password: ${SUPABASE_DB_PASSWORD}
-  jpa:
-    hibernate:
-      ddl-auto: update
-
+    
 eureka:
   client:
     fetch-registry: true
