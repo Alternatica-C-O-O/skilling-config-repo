@@ -22,3 +22,25 @@ logging:
     root: INFO
     org.springframework.web.reactive: DEBUG
     org.springframework.data.r2dbc: DEBUG
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      usuarioServiceCB: 
+        failureRateThreshold: 50
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 10
+      rolServiceCB:
+        failureRateThreshold: 50
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 10
+      permisoServiceCB:
+        failureRateThreshold: 50
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 10
