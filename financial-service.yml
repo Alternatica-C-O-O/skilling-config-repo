@@ -22,3 +22,19 @@ logging:
     root: INFO
     org.springframework.web.reactive: DEBUG
     org.springframework.data.r2dbc: DEBUG
+    io.github.resilience4j: INFO
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        failureRateThreshold: 50
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 10
+    instances:
+      planPrecioServiceCB:
+        base-config: default
+      transaccionPagoServiceCB:
+        base-config: default
