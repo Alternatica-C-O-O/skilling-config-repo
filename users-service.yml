@@ -14,7 +14,7 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka
   instance:
-    hostname: localhost
+    hostname: service-discovery
     prefer-ip-address: true
 
 logging:
