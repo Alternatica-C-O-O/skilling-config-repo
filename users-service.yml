@@ -22,6 +22,7 @@ logging:
     root: INFO
     org.springframework.web.reactive: DEBUG
     org.springframework.data.r2dbc: DEBUG
+    io.github.resilience4j: INFO
 
 resilience4j:
   circuitbreaker:
