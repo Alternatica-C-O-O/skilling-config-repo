@@ -29,8 +29,6 @@ resilience4j:
       usuarioServiceCB: 
         failureRateThreshold: 50
         waitDurationInOpenState: 5s
-        slidingWindowSize: 10 
-        minimumNumberOfCalls: 5
         permittedNumberOfCallsInHalfOpenState: 3
         slidingWindowType: COUNT_BASED
         slidingWindowSize: 10
